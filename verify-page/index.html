@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Verify a proof</title>
+<style>
+  :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+  body { max-width: 46rem; margin: 2rem auto; padding: 0 1rem; line-height: 1.5; }
+  textarea, input[type=file] { width: 100%; box-sizing: border-box; margin: .25rem 0 1rem; }
+  textarea { font-family: ui-monospace, monospace; font-size: .8rem; }
+  button { padding: .5rem 1rem; font-size: 1rem; }
+  .note { border-left: 4px solid #b58900; padding: .5rem 1rem; background: rgba(181,137,0,.1); font-size: .9rem; }
+  li.ok::marker { content: "✓ "; color: #2a9d4b; } li.fail::marker { content: "✗ "; color: #c0392b; }
+  #verdict { font-size: 1.4rem; font-weight: 600; margin-top: 1rem; }
+  small { color: GrayText; }
+</style>
+</head>
+<body>
+<h1>Verify a proof</h1>
+<p>Check that a file matches a proof bundle and that its fingerprint was anchored on Solana. The file is hashed in your browser and never uploaded; only the anchor transaction is read from a public RPC endpoint.</p>
+<p class="note">A verified proof shows that a record existed unchanged at the stated time. It is not a priority right, does not replace a patent application, is not a token of ownership, and is not legal advice. The time is the network's block time (accurate to a few seconds).</p>
+
+<label for="file">File</label>
+<input id="file" type="file">
+<label for="bundle-file">Proof bundle (JSON)</label>
+<input id="bundle-file" type="file" accept="application/json,.json">
+<textarea id="bundle" rows="6" aria-label="Paste proof JSON" placeholder="…or paste the proof JSON here"></textarea>
+<label for="trusted">Trusted anchorer addresses (one per line)</label>
+<textarea id="trusted" rows="2"></textarea>
+<small>A proof only counts if its anchor transaction was signed by an address you trust.</small><br><br>
+<button id="run">Verify</button>
+
+<div id="verdict" role="status" aria-live="polite"></div>
+<ul id="checks"></ul>
+<p id="link"></p>
+<!--SCRIPT-->
+</body>
+</html>

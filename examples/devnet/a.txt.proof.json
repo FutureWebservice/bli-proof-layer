@@ -1,0 +1,17 @@
+{
+  "v": 1,
+  "kind": "disclosure",
+  "salt": "6e87577b4cd81bb90ee20eed56c65f65b650d6618490e57cb10f09eb0385379e",
+  "leafIndex": 0,
+  "leafCount": 3,
+  "path": [
+    "702bde8f4a210d1f6df1c4e17c93fdd87cec67e333c596ed4f1032361e5af315",
+    "c5eff6cb87c24c5110e3324ec44d0ad7f6a6f9ab20e8ac986ba411529cb69516"
+  ],
+  "root": "29d31ca45059be60472625d71f4b3359bc42e5f82dcdbb4b312a920224476f0c",
+  "anchor": {
+    "cluster": "devnet",
+    "signature": "iMiFpvUihH8odt6WtQsVgXdXEokp26nUrF46zD4c52n7GohYrt737sHzjJaBg1DdVhViQd32f85uycYL8HE52FG"
+  },
+  "anchorer": "B5wGo7Yp7TmLdXAV5Zkn9xRMvZc3dzkozf5yweUPf6vJ"
+}

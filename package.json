@@ -1,0 +1,27 @@
+{
+  "name": "patentsecure-proof-layer",
+  "version": "0.1.0",
+  "description": "Hash-only proof of existence anchored on Solana: JCS, RFC 6962 Merkle batches, signed-memo anchoring, offline-verifiable proof bundles.",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "test": "vitest --run",
+    "typecheck": "tsc --noEmit",
+    "build:verify": "node build-verify.mjs",
+    "proof": "tsx scripts/proof-cli.ts"
+  },
+  "dependencies": {
+    "@solana-program/memo": "0.16.0",
+    "@solana/kit": "8.5.0",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "esbuild": "^0.25.12",
+    "fast-check": "^4.3.0",
+    "tsx": "^4.20.6",
+    "typescript": "5.9.3",
+    "vitest": "^4.0.15"
+  },
+  "license": "Apache-2.0"
+}
